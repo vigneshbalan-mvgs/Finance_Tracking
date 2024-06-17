@@ -19,7 +19,7 @@ router.get('/getAllByUserID/:userId', async (req: Request, res: Response) => {
         res.status(500).send(err);
     }
 });
-router.post('/', async (req: Request, res: Response) => {
+router.post('http://localhost:3001/financial-records', async (req: Request, res: Response) => {
     try {
         const newRecordBody = req.body;
         const newRecord = new FinancialRecordModel(newRecordBody);
